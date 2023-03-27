@@ -33,10 +33,8 @@ def get_letters(num_letters: int) -> list[str]:
     """
     start_letter: int = ord("a")
 
-    if num_letters > 26:
-        num_letters = (num_letters % 25) + 1
-
-    return [chr(start_letter + i) for i in range(num_letters)]
+    num: int = min(num_letters, 26)
+    return [chr(start_letter + i) for i in range(num)]
 
 
 # pylint: disable=too-many-arguments
