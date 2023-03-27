@@ -15,39 +15,40 @@
 \usepackage[margin=1in]{geometry}
 
 \begin{document}
+    \vspace*{\fill}
+    \vspace{-8em}
     \begin{center}
         \Huge
         \textbf{Bingo Board}
     \end{center}
-    \hspace{5cm}
 
-    \newlength{\cellwidth}
-    \setlength{\cellwidth}{3cm}
+    \newlength{\cellsize}
+    \setlength{\cellsize}{2.8cm}
 
-    \begin{center}
-        \renewcommand{\arraystretch}{7}
-        \setlength{\arrayrulewidth}{2.5pt}
+    \renewcommand{\arraystretch}{7}
+    \setlength{\arrayrulewidth}{2.5pt}
 
-        \newcommand{\tb}[1]{\parbox[c][3cm][c]{3cm}{\centering\Large\textbf{#1}}}
+    \newcommand{\tb}[1]{\parbox[c][\cellsize][c]{\cellsize}{\centering\Large\textbf{#1}}}
 
-        \begin{tabular}{
-                |>{\arraybackslash}m{\cellwidth}
-                |>{\arraybackslash}m{\cellwidth}
-                |>{\arraybackslash}m{\cellwidth}
-                |>{\arraybackslash}m{\cellwidth}
-                |>{\arraybackslash}m{\cellwidth}|
-            }
-            \hline
-            \tb{$a$} & \tb{$b$} & \tb{$c$} & \tb{$d$} & \tb{$e$} \\
-            \hline
-            \tb{$f$} & \tb{$g$} & \tb{$h$} & \tb{$i$} & \tb{$j$} \\
-            \hline
-            \tb{$k$} & \tb{$l$} & \tb{FREE SPACE} & \tb{$m$} & \tb{$n$} \\
-            \hline
-            \tb{$o$} & \tb{$p$} & \tb{$q$} & \tb{$r$} & \tb{$s$} \\
-            \hline
-            \tb{$t$} & \tb{$u$} & \tb{$v$} & \tb{$w$} & \tb{$x$} \\
-            \hline
-        \end{tabular}
-    \end{center}
+    \centering
+    \begin{tabular}{
+            |>{\arraybackslash}m{\cellsize}
+            |>{\arraybackslash}m{\cellsize}
+            |>{\arraybackslash}m{\cellsize}
+            |>{\arraybackslash}m{\cellsize}
+            |>{\arraybackslash}m{\cellsize}|
+        }
+        \hline
+        \tb{$a$} & \tb{$b$} & \tb{$c$} & \tb{$d$} & \tb{$e$} \\
+        \hline
+        \tb{$f$} & \tb{$g$} & \tb{$h$} & \tb{$i$} & \tb{$j$} \\
+        \hline
+        \tb{$k$} & \tb{$l$} & \tb{FREE SPACE} & \tb{$m$} & \tb{$n$} \\
+        \hline
+        \tb{$o$} & \tb{$p$} & \tb{$q$} & \tb{$r$} & \tb{$s$} \\
+        \hline
+        \tb{$t$} & \tb{$u$} & \tb{$v$} & \tb{$w$} & \tb{$x$} \\
+        \hline
+    \end{tabular}
+    \vspace*{\fill}
 \end{document}
