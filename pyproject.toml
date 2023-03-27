@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "bingo"
+version = "0.1.0"
+description = "Bingo board generator program"
+authors = ["Mickey Polito <me@displeased.site>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.1.1"
+pylint = "^2.17.1"
+black = "^23.1.0"
+
+[tool.mypy]
+python_version       = "3.10"
+packages             = ["bingo"]
+warn_return_any      = true
+warn_unused_configs  = true
+warn_no_return       = true
+warn_unreachable     = true
+warn_redundant_casts = true
+strict_equality      = true
+strict               = true
+
+[tool.pylint.main]
+fail-under = 15
+jobs       = 0
+py-version = "3.10"
+recursive  = true
+init-hook  = "import sys; sys.path.append('.')"
+exit-zero  = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
