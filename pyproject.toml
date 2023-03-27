@@ -6,6 +6,9 @@ authors = ["Mickey Polito <me@displeased.site>"]
 license = "MIT"
 readme = "README.md"
 
+[tool.poetry.scripts]
+bingo = "bingo:main"
+
 [tool.poetry.dependencies]
 python = "^3.10"
 
